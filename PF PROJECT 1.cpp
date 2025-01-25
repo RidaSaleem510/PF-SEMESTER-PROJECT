@@ -5,6 +5,14 @@
 #include <cctype> // For toupper
 
 using namespace std;
+// Function prototypes (declarations of functions used in the program)
+void displayPuzzle(const char puzzle[10][10], int rows, int cols); // Function to display the puzzle grid
+string toUpperCase(const string& str); // Function to convert a string to uppercase
+bool guessWord(const string& guess, string* words, bool* foundWords, int* attempts, int wordCount, int& wordsFound); // Function to process user guesses
+void endGame(int wordsFound, int totalWords); // Function to end the game and display results
+bool askToRetry(); // Function to ask the user if they want to play again
+bool loadPuzzle(const string& filename, char puzzle[10][10], int rows, int cols); // Function to load puzzle data from a file
+bool loadWords(const string& filename, string* words, int wordCount); // Function to load the word list from a file
 
 // Function to display the puzzle
 void displayPuzzle(const char puzzle[10][10], int rows, int cols) {
