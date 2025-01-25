@@ -30,6 +30,7 @@ void displayPuzzle(const char puzzle[10][10], int rows, int cols) {
     }
     cout << endl; // Add extra line at the end for clarity
 }
+
 // Convert a string to uppercase
 string toUpperCase(const string& str) {
     string result = str; // Create a copy of the input string
@@ -38,3 +39,27 @@ string toUpperCase(const string& str) {
     }
     return result; // Return the uppercase string
 }
+
+// Function to process a user's guess
+bool guessWord(const string& guess, string* words, bool* foundWords, int* attempts, int wordCount, int& wordsFound) {
+    for (int i = 0; i < wordCount; ++i) {
+        if (!foundWords[i] && guess == words[i]) {
+            cout << "Correct! You found the word: " << words[i] << "\n\n";
+            foundWords[i] = true;  // Mark the word as found
+            wordsFound++;          // Increment the count of found words
+            return true;
+        }
+    }
+
+    // If the guess is incorrect, update the attempts and notify the user
+    for (int i = 0; i < wordCount; ++i) {
+        if (!foundWords[i]) {
+            attempts[i]++; // Increment the incorrect attempt count for the word
+            cout << "Incorrect! " << (3 - attempts[i]) << " attempts left for this word.\n";
+            break; // Exit after the first incorrect guess
+        }
+    }
+    return false;
+}
+
+
