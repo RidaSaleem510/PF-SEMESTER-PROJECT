@@ -30,3 +30,11 @@ void displayPuzzle(const char puzzle[10][10], int rows, int cols) {
     }
     cout << endl; // Add extra line at the end for clarity
 }
+// Convert a string to uppercase
+string toUpperCase(const string& str) {
+    string result = str; // Create a copy of the input string
+    for (size_t i = 0; i < result.length(); ++i) { // Loop through each character
+        result[i] = toupper(result[i]); // Convert the character to uppercase
+    }
+    return result; // Return the uppercase string
+}
