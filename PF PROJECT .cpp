@@ -61,5 +61,11 @@ bool guessWord(const string& guess, string* words, bool* foundWords, int* attemp
     }
     return false;
 }
+// End the game and display final results
+void endGame(int wordsFound, int totalWords) {
+    cout << "Game Over! You found " << wordsFound << " out of " << totalWords << " words.\n";
+    cout << "Thanks for playing!\n";
+}
+
 
 
