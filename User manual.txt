@@ -9,40 +9,19 @@ The **Word Search Puzzle Game** is a simple and engaging program where players s
 Find all the hidden words in the grid. Words can appear in any direction: horizontal, vertical, or diagonal.
 
 ### Steps to Play
-1. Start the game by running the compiled program:
-2. View the grid of letters and the list of words to find.
-3. Enter a word to search for in the grid.
-4. The program will check the grid and mark the word if found.
-5. Continue searching until all words are found or you decide to stop.
-6. Save your progress automatically when the game ends.
+1. Start the game by running the compiled program.
+2. Look at the displayed puzzle and try to guess the hidden words.
+3. Enter a word corresponding to the hint lengths displayed.
+4. You can exit anytime by typing 'EXIT'.
+*/
 
 ## Features
-- Words can be searched in all directions.
-- Found words are marked in the grid.
-- Progress is saved to a file named `word_search_results.txt`.
+1. Displays a centered word search puzzle in the console.
+2. Users can guess words from the grid, and their input is case-insensitive.
+3. Each word has a maximum of 3 attempts. After three wrong guesses, the game ends.
+4. Users can type 'EXIT' at any time to immediately end the game.
+5. At the end of the game, the total number of found words is displayed.
+6. If the user fails or completes the game, they are prompted to try again.
 
-## Saving Results
-When you finish, the program generates a file containing:
-- The puzzle grid.
-- A list of words you found.
-
-## Troubleshooting
-- Ensure your C++ compiler is installed and properly configured.
-- Make sure the binary file has execute permissions.
-
-## Example Output
-**Puzzle Grid**:
-```
-A  B  C  D
-E  F  G  H
-I  J  K  L
-M  N  O  P
-```
-**Found Words**:
-```
-apple
-pear
-...
-```
 
 Enjoy playing the Word Search Puzzle Game!

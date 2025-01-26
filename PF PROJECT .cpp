@@ -14,6 +14,34 @@ bool askToRetry(); // Function to ask the user if they want to play again
 bool loadPuzzle(const string& filename, char puzzle[10][10], int rows, int cols); // Function to load puzzle data from a file
 bool loadWords(const string& filename, string* words, int wordCount); // Function to load the word list from a file
 
+
+int main() {
+    const int rows = 10; // Number of rows in the puzzle grid
+    const int cols = 10; // Number of columns in the puzzle grid
+    const int wordCount = 10; // Total number of words in the puzzle
+
+    // Puzzle grid and word list
+    char puzzle[10][10]; // 2D array to store the puzzle grid
+    string words[10]; // Array to store the words to find
+
+    // Load the puzzle grid from a file
+    if (!loadPuzzle("C:/Users/AL KHAIR COMPUTER/Desktop/sem proj/puzzle.txt", puzzle, rows, cols)) {
+        cerr << "Error: Failed to load puzzle from file." << endl; // Display error if the file cannot be loaded
+        return 1; // Exit the program with an error code
+    }
+
+    // Load the word list from a file
+    if (!loadWords("C:/Users/AL KHAIR COMPUTER/Desktop/sem proj/word.txt", words, wordCount)) {
+        cerr << "Error: Failed to load words from file." << endl; // Display error if the file cannot be loaded
+        return 1; // Exit the program with an error code
+    }
+
+    bool foundWords[10] = {false};  // Array to track which words have been found
+    int attempts[10] = {0};         // Array to track attempts for each word
+    int wordsFound = 0;             // Counter for words found
+    string guess;                   // Variable to store the user's guess
+    
+    
 // Function to display the puzzle
 void displayPuzzle(const char puzzle[10][10], int rows, int cols) {
     const int consoleWidth = 80; // Assume a standard console width
