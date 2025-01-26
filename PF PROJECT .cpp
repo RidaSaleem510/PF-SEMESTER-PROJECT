@@ -74,5 +74,24 @@ bool askToRetry() {
     cin >> response;
     return toUpperCase(response) == "YES"; // Return true if the user chooses "yes"
 }
+// Load the puzzle grid from a file
+bool loadPuzzle(const string& filename, char puzzle[10][10], int rows, int cols) {
+    ifstream file(filename.c_str()); // Open the file
+    if (!file.is_open()) return false; // Return false if the file cannot be opened
+
+    for (int i = 0; i < rows; ++i) { // Loop through each row
+        string line;
+        getline(file, line); // Read a line from the file
+        if (line.length() != cols) return false; // Ensure the line matches the column count
+
+        for (int j = 0; j < cols; ++j) { // Loop through each column
+            puzzle[i][j] = line[j]; // Assign the character to the puzzle grid
+        }
+    }
+
+    file.close(); // Close the file
+    return true; // Return true if the puzzle was loaded successfully
+}
+
 
 
