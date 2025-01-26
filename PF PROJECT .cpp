@@ -93,5 +93,20 @@ bool loadPuzzle(const string& filename, char puzzle[10][10], int rows, int cols)
     return true; // Return true if the puzzle was loaded successfully
 }
 
+// Function to load words from a file
+bool loadWords(const string& filename, string* words, int wordCount) {
+    ifstream file(filename.c_str()); // Open the file for reading
+    if (!file.is_open()) return false; // Return false if the file can't be opened
+
+    // Read each word from the file
+    for (int i = 0; i < wordCount; ++i) {
+        if (!(file >> words[i])) return false; // Ensure there are enough words in the file
+    }
+
+    file.close(); // Close the file after reading
+    return true;
+}
+
+
 
 
