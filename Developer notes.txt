@@ -1,0 +1,29 @@
+# Developer Notes for Word Search Puzzle Game
+
+## Overview
+The **Word Search Puzzle Game** is a C++ program where users search for words hidden in a 2D grid. The game supports multi-directional word search and saves results to a file.
+
+## Program Logic
+1. **Grid Creation**:
+   - A 2D array is used to represent the puzzle grid.
+   - Letters are randomly generated or predefined.
+2. **Word Search**:
+   - Words are searched in 8 directions:
+     - Horizontal: Left to Right, Right to Left
+     - Vertical: Top to Bottom, Bottom to Top
+     - Diagonal: All four diagonal directions
+   - Brute-force search checks each direction for matches.
+3. **User Interaction**:
+   - Users input words to search.
+   - Found words are highlighted in the grid.
+4. **Result Saving**:
+   - The program saves the puzzle grid and found words to `word_search_results.txt`.
+
+## Structure
+- **Main File**: `PF PROJECT.cpp` contains all logic.
+- **Functions**:
+  - Grid initialization.
+  - Word search algorithm.
+  - File I/O for saving results.
+
+Kept the code easy yet logically strong and intresting.
