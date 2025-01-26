@@ -67,5 +67,12 @@ void endGame(int wordsFound, int totalWords) {
     cout << "Thanks for playing!\n";
 }
 
+// Function to ask if the user wants to retry the game
+bool askToRetry() {
+    string response;
+    cout << "Do you want to try again? (yes/no): ";
+    cin >> response;
+    return toUpperCase(response) == "YES"; // Return true if the user chooses "yes"
+}
 
 
