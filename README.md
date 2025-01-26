@@ -47,17 +47,24 @@ After completing the game, the program will automatically generate a file named 
 ## Example Output
 **Puzzle Grid**:
 ```
-A  B  C  D  E  F  G  H  I  J
-K  L  M  N  O  P  Q  R  S  T
-U  V  W  X  Y  Z  A  B  C  D
-E  F  G  H  I  J  K  L  M  N
+T A R G E T S  
+C A R P L A N  
+H I S H I P E  
+E X T R E E A  
+P H O R S E L  
+B A L L P A N  
+Z P L A N E T  
+
 ...
 ```
 **Found Words**:
 ```
-apple
-orange
-banana
+TARGET
+HORSE
+SHIP
+BALL
+PLANE
+PLANET
 ...
 ```
 ## THANKYOU 
